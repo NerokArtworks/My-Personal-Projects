@@ -149,11 +149,10 @@ header{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    animation: revelar 1s ease-in-out;
+    animation: perspectiva 1.6s cubic-bezier(.075,.82,.165,1);
     transform-origin: top;
-    
 }
-@keyframes revelar {
+@keyframes perspectiva {
     from {
         transform: perspective(1000px) rotateX(-90deg);
     }
