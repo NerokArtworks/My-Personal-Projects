@@ -40,7 +40,16 @@ header{
     height: 5rem;
     line-height: 5rem;
     margin: 0vw 2.2vw;
-    border-bottom: 1px solid #ebeded;
+    
+}
+
+.o-white-bar {
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 5vw;
 }
 .h-logo {
     text-align: left;
