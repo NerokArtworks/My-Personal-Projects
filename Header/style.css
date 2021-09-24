@@ -1,0 +1,152 @@
+html{
+    -webkit-text-size-adjust: 100%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #00a19a;
+    color: #ebeded;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: normal;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;   
+    text-transform: uppercase;  
+}
+.container {
+    display: flex;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0vw 2.2vw;
+    border-bottom: 1px solid #ebeded;
+}
+.h-logo {
+    text-align: left;
+}
+.o-1quarter {
+    width: 25vw; 
+    display: flex;
+    justify-content: left; 
+}
+
+.h-lan {
+    display: flex;
+    align-items: center;
+}
+
+.h-lan ul {
+    list-style: none;
+    display: flex;
+}
+
+.h-lan ul li {
+    line-height: 1;
+}
+.h-lan ul li h1 {
+    border-right: 1px solid #ebeded;
+    padding-right: 0.54rem;
+}
+
+.o-3quarter {
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu ul li {
+    line-height: 1;
+}
+
+.menu ul li h1 {
+    border-right: 1px solid #ebeded;
+    padding:0 0.54rem;
+}
+.l-last-item {
+    border-right: none !important;
+    padding-left: .54rem;
+}
+.n-last-item {
+    border-right: none !important;
+}
+
+.con-slogan {
+    display: flex;
+    justify-content: center;
+}
+
+.o-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.c-home-header-title {
+    transform: translate3d(0,0,0);   
+    z-index: 4;
+}
+.c-home-header-title h2 {
+    text-transform: uppercase;
+    font-size: 5.7142857143vw;
+    font-weight: lighter;
+    text-align: center;
+}
+.c-home-header-title-line {
+    transform: scale3d(1,1,1);
+}
+
+.c-home-header-video {
+    position: absolute;
+    bottom: 5.6vw;
+    left: 50.0571428571vw;
+    z-index: 2;
+}
+
+.c-home-header-play-video {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    width: 25.1428571429vw;
+    height: 14.1142857143vw;
+}
+
+.c-home-header-play-video a video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
