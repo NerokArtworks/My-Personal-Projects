@@ -149,15 +149,15 @@ header{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    animation: revelar 2s ease-in-out;
+    animation: revelar 1s ease-in-out;
     transform-origin: top;
     
 }
 @keyframes revelar {
     from {
-        transform: rotate3d(50,0,0, -90deg);
+        transform: perspective(1000px) rotateX(-90deg);
     }
     to {
-        transform: rotate3d(0,0,0, 0deg);
+        transform: perspective(1000px) rotateX(0);
     }
 }
