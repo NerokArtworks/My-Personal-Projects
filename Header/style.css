@@ -28,6 +28,60 @@ h1{
     font-family: 'Montserrat', sans-serif;
     letter-spacing: normal;
 }
+
+.o-con-loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .6s cubic-bezier(1,.50,.165,1);
+    z-index: 100;
+    pointer-events: none;
+    background-color: #005e59;
+    opacity: 1;
+}
+
+.o-loading-line {
+    display: block;
+    width: 5.5rem;
+    height: 2px;
+    overflow: hidden;
+    transition: translate .3s cubic-bezier(.075,.82,.165,1);
+    transform-origin: center right;
+    transform: scalex(1) perspective(1000px);
+    animation: loading 1.2s cubic-bezier(.075,.82,.165,1) infinite;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+@keyframes loading {
+    0%{
+        opacity: 1;
+        transform: scaleX(0);
+        transform-origin: center left;
+    }
+    50%{
+        opacity: 1;
+        transform: scaleX(1);
+        transform-origin: center left;
+    }
+    51%{
+        opacity: 1;
+        transform: scaleX(1);
+        transform-origin: center right;
+    }
+    95%{
+        opacity: 1;
+        transform: scaleX(0);
+        transform-origin: center right;
+    }
+    100%{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+}
+
 header{
     position: fixed;
     width: 100%;
