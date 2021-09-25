@@ -39,13 +39,13 @@ h1{
     transition: opacity .6s cubic-bezier(1,.50,.165,1);
     z-index: 100;
     pointer-events: none;
-    background-color: #005e59;
+    background-color: #00a19a;
     opacity: 1;
 }
 
 .o-loading-line {
     display: block;
-    width: 5.5rem;
+    width: 6rem;
     height: 2px;
     overflow: hidden;
     transition: translate .3s cubic-bezier(.075,.82,.165,1);
@@ -54,24 +54,23 @@ h1{
     animation: loading 1.2s cubic-bezier(.075,.82,.165,1) infinite;
     background-color: rgba(255, 255, 255, 0.548);
 }
-
 @keyframes loading {
     0%{
         opacity: 1;
         transform: scaleX(0);
         transform-origin: center left;
     }
-    50%{
+    40%{
         opacity: 1;
         transform: scaleX(1);
         transform-origin: center left;
     }
-    51%{
+    45%{
         opacity: 1;
         transform: scaleX(1);
         transform-origin: center right;
     }
-    95%{
+    65%{
         opacity: 1;
         transform: scaleX(0);
         transform-origin: center right;
@@ -98,12 +97,13 @@ header{
 }
 
 .o-white-bar {
-    width: 90%;
+    width: 96%;
     height: 1px;
     background-color: white;
     position: absolute;
-    bottom: 0;
-    left: 5vw;
+    bottom: 20vh;
+    transition: bottom 1s cubic-bezier(.075,.82,.165,1);
+    left: 2vw;
 }
 .h-logo {
     text-align: left;
@@ -180,6 +180,7 @@ header{
 }
 
 .c-home-header-title {
+    position: fixed;
     transform: translate3d(0,0,0);   
     z-index: 4;
 }
@@ -190,9 +191,22 @@ header{
     text-align: center;
 }
 .c-home-header-title-line {
-    transform: scale3d(1,1,1);
+    position: relative;
+    opacity: 0;
+    transition: opacity .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: line-show 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-delay: 2.49s;
+    transform-origin: center;
 }
 
+@keyframes line-show {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
+}
 .c-home-header-video {
     position: absolute;
     bottom: 5.6vw;
@@ -208,12 +222,15 @@ header{
     height: 14.1142857143vw;
 }
 
-.c-home-header-play-video a video {
+.h-video {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    animation: perspectiva 1.6s cubic-bezier(.075,.82,.165,1);
     transform-origin: top;
+    animation: perspectiva 2s cubic-bezier(.075,.82,.165,1);
+    animation-delay: 3.19s;
+    opacity: 0;
+    
 }
 @keyframes perspectiva {
     from {
