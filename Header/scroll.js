@@ -32,4 +32,4 @@ var observer = new IntersectionObserver(function(entries) {
 	}
 }, { threshold: [0, 0.5, 1] });
 
-observer.observe(document.querySelector(".s-3quarter"));
+observer.observe(document.querySelector("#h-trigger"));
