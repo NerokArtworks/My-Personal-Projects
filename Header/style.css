@@ -251,3 +251,11 @@ header{
         transform: perspective(1000px) rotateX(0);
     }
 }
+
+.s-first {
+    position: relative;
+    margin-top: 200vh;
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+}
