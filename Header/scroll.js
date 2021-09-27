@@ -1,8 +1,10 @@
 var contador = 0;
 var hLine = document.getElementsByClassName("h-red-bar")[0];
+var videoPersp = document.getElementsByClassName("s-video1")[0];
 
 function contadorState() {
-    if (contador > 0, window.scrollY > 550) {
+    if (contador > 0, window.scrollY > 500) {
+        videoPersp.classList.add("s-video1-show");
         hLine.style.bottom = "0vh";
     }
     else if (window.scrollY < 550) {
@@ -30,4 +32,4 @@ var observer = new IntersectionObserver(function(entries) {
 	}
 }, { threshold: [0, 0.5, 1] });
 
-observer.observe(document.querySelector(".s-video1"));
+observer.observe(document.querySelector(".s-3quarter"));
