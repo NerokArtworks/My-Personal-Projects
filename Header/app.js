@@ -1,4 +1,4 @@
-function timer() {
+function timers() {
     setTimeout(vidAnim, 3200);
     setTimeout(textAnim, 2500);
 }
@@ -11,6 +11,8 @@ function vidAnim() {
 function textAnim() { 
     for (const element of document.getElementsByClassName("c-home-header-title-line")){
         element.style.opacity="1";
-     }
+    }
+    var cabecera = document.getElementsByTagName("header")[0];
+    cabecera.style.transform = "translate(0,0)";
 }
-timer();
+timers();

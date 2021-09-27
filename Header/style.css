@@ -86,7 +86,18 @@ header{
     width: 100%;
     top: 0;
     left: 0;   
-    text-transform: uppercase;  
+    text-transform: uppercase; 
+    animation: loadMenu 1s cubic-bezier(.075,.82,.165,1);
+    animation-delay: 2.49s;
+    transform: translate(0,-100%);
+}
+@keyframes loadMenu {
+    from {
+        transform: translate(0,-100%);
+    }
+    to {
+        transform: translate(0,0);
+    }
 }
 .container {
     display: flex;
