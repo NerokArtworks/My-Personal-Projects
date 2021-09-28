@@ -3,13 +3,14 @@ var hLine = document.getElementsByClassName("h-red-bar")[0];
 var videoPersp = document.getElementsByClassName("s-video1")[0];
 
 function contadorState() {
-    if (contador > 0, window.scrollY > 500) {
+    if (window.scrollY < 550) {
+        hLine.style.bottom = "9vh";
+    }    
+    else if (contador > 0, window.scrollY > 500) {
         videoPersp.classList.add("s-video1-show");
         hLine.style.bottom = "0vh";
     }
-    else if (window.scrollY < 550) {
-        hLine.style.bottom = "9vh";
-    }    
+
 }
 
 //Observer
