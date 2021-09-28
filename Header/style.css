@@ -317,19 +317,6 @@ header{
     transform: perspective(1000px) rotateX(0deg);
 }
 
-.s-second {
-    margin: 0 2vw;
-    position: relative;
-    top: 15vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: 96%;
-    height: 100vh;
-    background-color:#ebeded;
-    z-index: 5;
-}
-
 .s-half-text {
     width: 50%;
     display: inline-block;
@@ -399,4 +386,44 @@ a:active, a:hover {
     position: relative;
     transition: opacity .6s cubic-bezier(.075,.82,.165,1);
     transform: translate(-30%,0);
+}
+
+.s-second {
+    position: relative;
+    top: 15vh;
+    height: 500vh;
+}
+
+.s-home-work-header {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    align-items:stretch;
+    bottom: auto;
+    height: 100vh;
+    padding-top: 6rem;
+    margin-bottom: -7.5rem;
+    display: flex;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 5;
+    background-color:#ebeded;
+}
+
+.s-home-work-header__title {
+    font-size: 5.7142857143vw;
+    text-align: center;
+    margin: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.s-third {
+    background-color:#ebeded;
+    position: relative;
+    top: 0;
+    z-index: 6;
 }
