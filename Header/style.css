@@ -70,7 +70,7 @@ h1{
         transform: scaleX(1);
         transform-origin: center right;
     }
-    65%{
+    85%{
         opacity: 1;
         transform: scaleX(0);
         transform-origin: center right;
