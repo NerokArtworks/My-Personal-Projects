@@ -486,7 +486,7 @@ a:active, a:hover {
     vertical-align: middle;
     border-style: none;
     transform: scale3d(1,1,1);
-    z-index: 6;
+    z-index: 8;
 }
 
 .s-work__video {
