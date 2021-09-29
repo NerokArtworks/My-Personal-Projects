@@ -105,7 +105,7 @@ header{
     animation: loadMenu 1s cubic-bezier(.075,.82,.165,1);
     animation-delay: 2.49s;
     transform: translate(0,-100%);
-    z-index: 6;
+    z-index: 20;
 }
 @keyframes loadMenu {
     from {
@@ -301,7 +301,6 @@ header{
     position: relative;
     letter-spacing: normal;
     vertical-align: top;
-    transform: perspective(1000px) rotateX(0);
     z-index: 5;
     border-top: 1px solid #e83c38;
     height: auto;
@@ -417,8 +416,6 @@ a:active, a:hover {
     position: sticky;
     top: 0;
     bottom: 0;
-    align-items:stretch;
-    bottom: auto;
     height: 100vh;
     padding-top: 6rem;
     margin-bottom: -7.5rem;
@@ -451,12 +448,39 @@ a:active, a:hover {
 }
 
 .s-work__item {
-    padding-left: 4.5714285714vw;
-    padding-right: 4.5714285714vw;
+    padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
     position: relative;
     z-index: 6;
+}
+
+.s-home-work-section .s-work__item {
+    margin-bottom: 7.5rem;
+    padding-right: 5rem;
+}
+
+.s-home-work-section .s-work__item:nth-child(2) {
+    padding-left: 11.4285714286vw;
+}
+
+.s-work__item:nth-child(2n-1) .s-work__img {
+    padding-right: 2.5rem;
+}
+
+.s-home-work-section .s-work__item:nth-child(3) {
+    padding-left: 11.4285714286vw;
+    padding-right: 0;
+}
+
+.s-home-work-section .s-work__item:nth-child(4) {
+    padding-left: 5.7142857143vw;
+    padding-right: 11.4285714286vw;
+}
+
+.s-home-work-section .s-work__item:nth-child(5) {
+    padding-left: 2.7142857143vw;
+    margin-left: 21.2428571429vw;
 }
 
 .s-work__link {
@@ -503,9 +527,11 @@ a:active, a:hover {
 
 .s-work__video video {
     object-fit: cover;
+    -o-object-fit: cover;
     width: 100%;
     height: 100%;
     vertical-align: middle;
     display: inline-block;
     z-index: 6;
 }
+

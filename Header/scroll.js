@@ -6,7 +6,7 @@ function contadorState() {
     if (window.scrollY < 550) {
         hLine.style.bottom = "9vh";
     }    
-    else if (contador > 0, window.scrollY > 500) {
+    else if (contador > 0, window.scrollY > 200) {
         videoPersp.classList.add("s-video1-show");
         hLine.style.bottom = "0vh";
     }
