@@ -12,6 +12,20 @@ body {
     color: #e83c38;
 }
 
+::-webkit-scrollbar {
+    border: none;
+    width: 8px;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar-track {
+    border: none;
+    box-shadow: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #e83c38;
+}
 a {
     color: inherit;
     text-decoration: none;
