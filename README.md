@@ -1,3 +1,3 @@
 "# MyProjects" 
 
-IMPORTANT >>> 5S Content is a personal recreation of 5scontent.com webpage that im developing.
+IMPORTANT >>> 5S Content is a personal recreation of http://www.5scontent.com webpage that im developing.
