@@ -535,3 +535,10 @@ a:active, a:hover {
     z-index: 6;
 }
 
+.s-work__img__warp:hover img {
+    opacity: 1;
+}
+
+.s-work__video:hover {
+    opacity: 1;
+}
