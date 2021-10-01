@@ -25,6 +25,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
     background-color: #e83c38;
+    height: 16vh;
 }
 a {
     color: inherit;
