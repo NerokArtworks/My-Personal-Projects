@@ -410,7 +410,7 @@ a:active, a:hover {
 .s-second {
     position: relative;
     top: 15vh;
-    height: 500vh;
+    height: auto;
 }
 
 .s-home-work-header {
@@ -542,4 +542,38 @@ a:active, a:hover {
 
 .s-work__video:hover {
     opacity: 1;
+}
+.s-final {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 96%;
+    margin-left: 2vw;
+    height: 100vh;
+    margin-top: 20vh;
+    background-color: #ebeded;
+    position: relative;
+    z-index: 18;
+    border-top: 1px solid #e83c38;
+}
+
+.s-final .o-3quarter {
+    
+}
+
+.c-clients {
+    border-bottom: 1px solid #e83c38;
+    width: 100%;
+}
+.no-stroke-top {
+    padding: 1.425rem 0;
+    border-top: none;
+}
+
+.t-clients {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    font-family: 'Montserrat', sans-serif;
 }
