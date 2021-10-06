@@ -558,7 +558,7 @@ a:active, a:hover {
 }
 
 .s-final .o-3quarter {
-    
+    display: inline-block;
 }
 
 .c-clients {
@@ -576,4 +576,29 @@ a:active, a:hover {
     font-size: 1rem;
     letter-spacing: -1px;
     font-family: 'Montserrat', sans-serif;
+}
+.f-list {
+    width: 100%;
+    display: flex;
+}
+
+.f-list-item:nth-child(0) {
+    width: 25%;
+    height: 10vh;
+}
+.f-list-item:nth-child(1) {
+    width: 25%;
+    height: 10vh;
+}
+.f-list-item:nth-child(2) {
+    width: 25%;
+    height: 10vh;
+}
+.f-list-item:nth-child(3) {
+    width: 25%;
+    height: 10vh;
+}
+.f-list-item:nth-child(4) {
+    width: 25%;
+    height: 10vh;
 }
