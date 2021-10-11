@@ -561,7 +561,7 @@ a:active, a:hover {
     display: inline-block;
 }
 
-.c-clients {
+.f-title-list {
     border-bottom: 1px solid #e83c38;
     width: 100%;
 }
@@ -570,7 +570,7 @@ a:active, a:hover {
     border-top: none;
 }
 
-.t-clients {
+.t-list {
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1rem;
@@ -580,25 +580,75 @@ a:active, a:hover {
 .f-list {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
-.f-list-item:nth-child(0) {
+.f-list__item {
     width: 25%;
-    height: 10vh;
+    position: relative;
 }
-.f-list-item:nth-child(1) {
-    width: 25%;
-    height: 10vh;
+svg {
+    fill: #e83c38!important;
 }
-.f-list-item:nth-child(2) {
-    width: 25%;
-    height: 10vh;
+.ford0 {
+    fill: #e83c38 !important;
 }
-.f-list-item:nth-child(3) {
-    width: 25%;
-    height: 10vh;
+.f-list__link {
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: opacity .6s cubic-bezier(.075,.82,.165,1);
+    pointer-events: none;
+    height: 9.7142857143vw;
 }
-.f-list-item:nth-child(4) {
-    width: 25%;
-    height: 10vh;
+.f-list__link svg {
+    max-width: 13.0285714286vw;
+    max-height: 2.6285714286vw;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.f-list__item:nth-child(1)::before, .f-list__item:nth-child(2)::before, .f-list__item:nth-child(3)::before {
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
+}
+.f-list__item:nth-child(4n)::before {
+    display: none;
+}
+.f-list__item:nth-child(5)::before, .f-list__item:nth-child(6)::before, .f-list__item:nth-child(7)::before {
+    -webkit-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+}
+
+.f-list__item::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    content: "";
+    background: #e83c38;
+}
+
+.f-list__item::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: #e83c38;
+}
+
+.lancome1 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
 }
