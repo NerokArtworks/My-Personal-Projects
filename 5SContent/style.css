@@ -665,12 +665,15 @@ svg {
 }
 
 .f-footer {
+    width: 96%;
+    margin-left: 2vw;
     position: relative;
     z-index: 18;
     display: block;
     color: #e83c38;
     top: 15vh;
     background-color: #ebeded;
+    border-bottom: 1px solid #e83c38;
 }
 
 .f-footer__background {
@@ -702,14 +705,12 @@ svg {
 
 .f-grid {
     position: relative;
-    margin-left: -5rem;
     letter-spacing: normal;
     font-size: 0;
 }
 
 .f-third {
     display: inline-block;
-    padding-left: 5rem;
     width: 100%;
     vertical-align: top;
     font-size: 1rem;
