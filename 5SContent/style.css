@@ -692,11 +692,7 @@ svg {
 .f-footer-content p {
     margin: 0;
     text-transform: uppercase;
-}
-
-.f-footer-content p {
     position: relative;
-
 }
 
 .f-footer-content__padding {
@@ -706,7 +702,6 @@ svg {
 .f-grid {
     position: relative;
     letter-spacing: normal;
-    font-size: 0;
 }
 
 .f-third {
