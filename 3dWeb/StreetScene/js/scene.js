@@ -24,11 +24,23 @@ for (let x = -sceneWidth / 2; x < sceneWidth / 2; x+= 1) {
     const geo = new THREE.BoxGeometry(  0.95, 0.1, 0.95 );
     const mat = new THREE.MeshBasicMaterial( { color: 0x828282 } );
     const sidewalk = new THREE.Mesh ( geo, mat );
-    sidewalk.position.set( x + 0.5, 0.05, -2.4 );
+    sidewalk.position.set( x + 0.5, 0.06, -2.4 );
     scene.add( sidewalk );
 
     const sidewalk2 = new THREE.Mesh ( geo, mat );
-    sidewalk2.position.set( x + 0.5, 0.05, -3.5 );
+    sidewalk2.position.set( x + 0.5, 0.06, -3.5 );
+    scene.add( sidewalk2 );
+}
+
+for (let x = -sceneWidth / 2; x < sceneWidth / 2; x+= 1) {
+    const geo = new THREE.BoxGeometry(  0.95, 0.1, 0.95 );
+    const mat = new THREE.MeshBasicMaterial( { color: 0x828282 } );
+    const sidewalk = new THREE.Mesh ( geo, mat );
+    sidewalk.position.set( x + 0.5, 0.06, 2.4 );
+    scene.add( sidewalk );
+
+    const sidewalk2 = new THREE.Mesh ( geo, mat );
+    sidewalk2.position.set( x + 0.5, 0.06, 3.5 );
     scene.add( sidewalk2 );
 }
 
@@ -69,7 +81,35 @@ for (let i = 0; i < numTrees; i++) {
 
     let x = random( -sceneWidth / 2, sceneWidth / 2);
     let z = random( -2, -3 );
-    tree.position.set( x , h / 2, z );
+    tree.position.set( x , h / 2 + 0.05, z );
+    scene.add( tree );
+}
+
+for (let i = 0; i < numTrees; i++) {
+    const tree = new THREE.Group();
+    const h = random( 2, 4 );
+    const geo = new THREE.CylinderGeometry( 0.125, 0.25, h, 5 );
+    const mat = new THREE.MeshBasicMaterial( { color: 0xA19281 } );
+    const trunk = new THREE.Mesh( geo, mat);
+    tree.add ( trunk );
+
+    const numLeaves = random( 10, 20 );
+    for (let j = 0; j < numLeaves; j++) {
+        const leafGeo = new THREE.IcosahedronGeometry( random( 1, 1 ) );
+        const leafMat = new THREE.MeshBasicMaterial( { color: 0x8AE8A7 } );
+        const leaf = new THREE.Mesh( leafGeo, leafMat );
+        let x = random( -0.5, 0.5);
+        let y = h / 2 + random( -0.5, 0.25 );
+        let z = random( -0.5, 0.5);
+        leaf.position.set( x, y, z );
+        leaf.rotation.x = random( 0, Math.PI * 0.5);
+        leaf.rotation.y = random( 0, Math.PI * 0.5);
+        tree.add( leaf );
+    }
+
+    let x = random( -sceneWidth / 2, sceneWidth / 2);
+    let z = random( 2, 3 );
+    tree.position.set( x , h / 2 + 0.05, z );
     scene.add( tree );
 }
 
