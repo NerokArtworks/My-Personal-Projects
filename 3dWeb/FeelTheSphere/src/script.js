@@ -18,7 +18,8 @@ const canvas = document.querySelector( 'canvas.webgl' );
 const scene = new THREE.Scene();
 
 // Objects
-const geometry = new THREE.SphereGeometry( .5, 64, 64 );
+const sphereGeometry = new THREE.SphereGeometry( .5, 64, 64 );
+const sphereWireframeGeometry = new THREE.SphereGeometry( 15, 32, 16 );
 
 // Materials
 const material = new THREE.MeshStandardMaterial();
@@ -28,8 +29,28 @@ material.normalMap = normalTexture;
 material.color = new THREE.Color( 0x292929 );
 
 // Mesh
-const sphere = new THREE.Mesh( geometry, material );
+
+    //Spheres
+const sphere = new THREE.Mesh( sphereGeometry, material );
 scene.add( sphere );
+
+const sphere2 = new THREE.Mesh( sphereGeometry, material );
+sphere2.position.set( -3, 1.2, -4 );
+scene.add( sphere2 );
+
+const sphere3 = new THREE.Mesh( sphereGeometry, material );
+sphere3.position.set( 2.2, 2.2, -3.5 );
+scene.add( sphere3 );
+
+    //Sphere Wireframe
+const sphereWireGeometry = new THREE.WireframeGeometry( sphereWireframeGeometry );
+const sphereWireframeLine = new THREE.LineSegments( sphereWireGeometry );
+
+sphereWireframeLine.material.depthTest = true;
+sphereWireframeLine.material.opacity = .5;
+sphereWireframeLine.material.transparent = true;
+sphereWireframeLine.position.set( 0, 0, -10 );
+scene.add( sphereWireframeLine );
 
 // Lights
 
@@ -83,6 +104,17 @@ const light3Color = {
 // const pointLightHelper2 = new THREE.PointLightHelper( pointLight3, .5 );
 // scene.add( pointLightHelper2 );
 
+const pointLight4 = new THREE.PointLight( 0x1C1E21, 2 );
+pointLight4.position.set( -3, 1, -2 );
+pointLight4.intensity = -50;
+
+scene.add(pointLight4);
+
+const pointLight5 = new THREE.PointLight( 0xffffff, 2 );
+pointLight5.position.set( -5, 2, -5 );
+pointLight5.intensity = 5;
+
+scene.add(pointLight5);
 /**
  * Sizes
  */
@@ -123,6 +155,7 @@ scene.add( camera );
 /**
  * Renderer
  */
+
 const renderer = new THREE.WebGLRenderer( {
     canvas: canvas, 
     antialias: true, 
@@ -152,7 +185,14 @@ function onDocumentMouseMove ( event ) {
 };
 
 const updateSphere = ( event ) => {
-    sphere.position.y = window.scrollY * .001;
+
+    //Spheres
+    sphere.position.y = window.scrollY * .003;
+    sphere2.position.y = window.scrollY * .002 + 1.2;
+    sphere3.position.y = window.scrollY * -.005 + 2.2;
+
+    //Sphere Wireframe
+    sphereWireframeLine.position.y = window.scrollY * -.005 + .5;
 }
 
 window.addEventListener( 'scroll', updateSphere );
@@ -167,11 +207,29 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime();
 
     // Update objects
+    
+        //Spheres
     sphere.rotation.y = .5 * elapsedTime;
+    sphere2.rotation.y = .5 * elapsedTime;
+    sphere3.rotation.y = -.5 * elapsedTime;
 
     sphere.rotation.y += .05 * ( targetX - sphere.rotation.y );
     sphere.rotation.x += .05 * ( targetY - sphere.rotation.x );
     sphere.position.z += -.05 * ( targetY - sphere.rotation.x );
+
+    sphere2.rotation.y += .05 * ( targetX - sphere2.rotation.y );
+    sphere2.rotation.x += .05 * ( targetY - sphere2.rotation.x );
+    sphere2.position.z += -.05 * ( targetY - sphere2.rotation.x );
+
+    sphere3.rotation.y += .05 * ( targetX - sphere3.rotation.y );
+    sphere3.rotation.x += .05 * ( targetY - sphere3.rotation.x );
+    sphere3.position.z += -.05 * ( targetY - sphere3.rotation.x );
+
+        //Sphere Wireframe
+    sphereWireframeLine.rotation.y += .05 * ( targetX - sphereWireframeLine.rotation.y );
+    sphereWireframeLine.rotation.x += .05 * ( targetY - sphereWireframeLine.rotation.x );
+    sphereWireframeLine.position.z += -.05 * ( targetY - sphereWireframeLine.rotation.x );
+    
 
     // Update Orbital Controls
     // controls.update()
