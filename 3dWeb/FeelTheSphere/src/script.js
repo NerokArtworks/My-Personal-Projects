@@ -34,6 +34,7 @@ material.color = new THREE.Color( 0x292929 );
 const sphere = new THREE.Mesh( sphereGeometry, material );
 scene.add( sphere );
 
+<<<<<<< HEAD
 const sphere2 = new THREE.Mesh( sphereGeometry, material );
 sphere2.position.set( -3, 1.2, -4 );
 scene.add( sphere2 );
@@ -51,6 +52,12 @@ sphereWireframeLine.material.opacity = .5;
 sphereWireframeLine.material.transparent = true;
 sphereWireframeLine.position.set( 0, 0, -10 );
 scene.add( sphereWireframeLine );
+=======
+const sphere2 = new THREE.Mesh( geometry, material );
+scene.add( sphere2 );
+
+sphere2.position.set( -2, 1.4, -3 );
+>>>>>>> ef19e82bed4256a6782cc9ab6f68b25a22e6a03f
 
 // Lights
 
@@ -185,6 +192,7 @@ function onDocumentMouseMove ( event ) {
 };
 
 const updateSphere = ( event ) => {
+<<<<<<< HEAD
 
     //Spheres
     sphere.position.y = window.scrollY * .003;
@@ -193,6 +201,9 @@ const updateSphere = ( event ) => {
 
     //Sphere Wireframe
     sphereWireframeLine.position.y = window.scrollY * -.005 + .5;
+=======
+    sphere.position.y = window.scrollY * .002;
+>>>>>>> ef19e82bed4256a6782cc9ab6f68b25a22e6a03f
 }
 
 window.addEventListener( 'scroll', updateSphere );
@@ -211,11 +222,18 @@ const tick = () =>
         //Spheres
     sphere.rotation.y = .5 * elapsedTime;
     sphere2.rotation.y = .5 * elapsedTime;
+<<<<<<< HEAD
     sphere3.rotation.y = -.5 * elapsedTime;
+=======
+>>>>>>> ef19e82bed4256a6782cc9ab6f68b25a22e6a03f
 
     sphere.rotation.y += .05 * ( targetX - sphere.rotation.y );
     sphere.rotation.x += .05 * ( targetY - sphere.rotation.x );
     sphere.position.z += -.05 * ( targetY - sphere.rotation.x );
+    sphere2.rotation.y += .05 * ( targetX - sphere2.rotation.y );
+    sphere2.rotation.x += .05 * ( targetY - sphere2.rotation.x );
+    sphere2.position.z += -.05 * ( targetY - sphere2.rotation.x );
+    
 
     sphere2.rotation.y += .05 * ( targetX - sphere2.rotation.y );
     sphere2.rotation.x += .05 * ( targetY - sphere2.rotation.x );
