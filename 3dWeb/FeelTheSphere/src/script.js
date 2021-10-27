@@ -31,6 +31,11 @@ material.color = new THREE.Color( 0x292929 );
 const sphere = new THREE.Mesh( geometry, material );
 scene.add( sphere );
 
+const sphere2 = new THREE.Mesh( geometry, material );
+scene.add( sphere2 );
+
+sphere2.position.set( -2, 1.4, -3 );
+
 // Lights
 
     //Light 01
@@ -152,7 +157,7 @@ function onDocumentMouseMove ( event ) {
 };
 
 const updateSphere = ( event ) => {
-    sphere.position.y = window.scrollY * .001;
+    sphere.position.y = window.scrollY * .002;
 }
 
 window.addEventListener( 'scroll', updateSphere );
@@ -168,10 +173,15 @@ const tick = () =>
 
     // Update objects
     sphere.rotation.y = .5 * elapsedTime;
+    sphere2.rotation.y = .5 * elapsedTime;
 
     sphere.rotation.y += .05 * ( targetX - sphere.rotation.y );
     sphere.rotation.x += .05 * ( targetY - sphere.rotation.x );
     sphere.position.z += -.05 * ( targetY - sphere.rotation.x );
+    sphere2.rotation.y += .05 * ( targetX - sphere2.rotation.y );
+    sphere2.rotation.x += .05 * ( targetY - sphere2.rotation.x );
+    sphere2.position.z += -.05 * ( targetY - sphere2.rotation.x );
+    
 
     // Update Orbital Controls
     // controls.update()

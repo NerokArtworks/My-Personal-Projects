@@ -38,3 +38,13 @@ h1 {
 }
 
 section {height: 100vh;}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(rgb(24,24,24), transparent);
+    z-index: 10;
+}
