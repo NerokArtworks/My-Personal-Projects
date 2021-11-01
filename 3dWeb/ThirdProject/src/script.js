@@ -2,6 +2,7 @@ import './style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
+import './main.js';
 
 // Loading
 const textureLoader = new THREE.TextureLoader();
@@ -19,11 +20,16 @@ const scene = new THREE.Scene();
 
 // Objects
 const sphereGeometry = new THREE.SphereGeometry( .5, 64, 64 );
-const sphereWireframeGeometry = new THREE.SphereGeometry( 15, 32, 16 );
-const planeGeometry = new THREE.PlaneGeometry( 10.5, 9.5 );
+const sphereWireframeGeometry = new THREE.SphereGeometry( 20, 32, 16 );
+
+    // Images
+const planeGeometryHachiRoku = new THREE.PlaneGeometry( 12.5, 9.5 );
+const planeGeometry02 = new THREE.PlaneGeometry( 9, 5.5 );
+const planeGeometry03 = new THREE.PlaneGeometry( 8, 5.5 );
+const planeGeometry04 = new THREE.PlaneGeometry( 8, 5.5 );
 
 
-
+    //Wireframed Cube
 const edgeGeometry = new THREE.BoxGeometry( 4, 4, 4 );
 const edges = new THREE.EdgesGeometry( edgeGeometry );
 const edgeLine = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0xffffff } ) );
@@ -37,9 +43,18 @@ material.roughness = 0.2;
 material.normalMap = normalTexture;
 material.color = new THREE.Color( 0x292929 );
 
+    // Image Loads
 const planeTexture =textureLoader.load( '/img/hachiroku.jpg' );
-// immediately use the texture for material creation
+const planeTexture02 =textureLoader.load( '/img/07.jpg' );
+const planeTexture03 =textureLoader.load( '/img/09.jpg' );
+const planeTexture04 =textureLoader.load( '/img/04.jpg' );
+const planeTexture05 =textureLoader.load( '/img/05.jpg' );
+
+        // Immediately use the texture for material creation
 const planeMaterial = new THREE.MeshBasicMaterial( { map: planeTexture } );
+const planeMaterial02 = new THREE.MeshBasicMaterial( { map: planeTexture02 } );
+const planeMaterial03 = new THREE.MeshBasicMaterial( { map: planeTexture03 } );
+const planeMaterial04 = new THREE.MeshBasicMaterial( { map: planeTexture04 } );
 
 
 // Mesh
@@ -67,33 +82,47 @@ sphereWireframeLine.position.set( 0, 0, -10 );
 scene.add( sphereWireframeLine );
 
     //Plane for images
-const imagePlane = new THREE.Mesh( planeGeometry, planeMaterial );
+const imagePlane = new THREE.Mesh( planeGeometryHachiRoku, planeMaterial );
 imagePlane.position.set( 0, 0, -5 );
 
 scene.add( imagePlane );
 
-const imagePlane2 = new THREE.Mesh( planeGeometry, planeMaterial );
-imagePlane2.position.set( 0, 0, 8 );
-imagePlane2.scale.set( 1,1 );
+const imagePlane02 = new THREE.Mesh( planeGeometry02, planeMaterial02 );
+imagePlane02.position.set( 0, 0, 8 );
+imagePlane02.scale.set( 1,1 );
 
-scene.add( imagePlane2 );
+scene.add( imagePlane02 );
+
+const imagePlane03 = new THREE.Mesh( planeGeometry03, planeMaterial03 );
+imagePlane03.position.set( -9, 0, 8 );
+imagePlane03.scale.set( 1,1 );
+imagePlane03.rotation.set( 0, -25, 0 );
+
+scene.add( imagePlane03 );
+
+const imagePlane04 = new THREE.Mesh( planeGeometry04, planeMaterial04 );
+imagePlane04.position.set( 9, 0, 8 );
+imagePlane04.scale.set( 1,1 );
+imagePlane04.rotation.set( 0, 25, 0 );
+
+scene.add( imagePlane04 );
 
 
 // Lights
 
     //Light 01
-const pointLight = new THREE.PointLight( 0xffffff, 0.1 );
-pointLight.position.x = 2;
-pointLight.position.y = 3;
-pointLight.position.z = 4;
-scene.add(pointLight);
+// const pointLight = new THREE.PointLight( 0xffffff, 0.1 );
+// pointLight.position.x = 2;
+// pointLight.position.y = 3;
+// pointLight.position.z = 4;
+// scene.add(pointLight);
 
     //Light 02
-const pointLight2 = new THREE.PointLight( 0xff0000, 2 );
-pointLight2.position.set( -1.86, 1, -1.65 );
-pointLight2.intensity = 10;
+// const pointLight2 = new THREE.PointLight( 0xff0000, 2 );
+// pointLight2.position.set( -1.86, 1, -1.65 );
+// pointLight2.intensity = 10;
 
-scene.add(pointLight2);
+// scene.add(pointLight2);
 
 // const light2 = gui.addFolder( 'Light 02' );
 
@@ -106,11 +135,11 @@ scene.add(pointLight2);
 // scene.add( pointLightHelper );
 
     // Light 03
-const pointLight3 = new THREE.PointLight( 0xe1ff, 2 );
-pointLight3.position.set( 2.13, -3, -1.98 );
-pointLight3.intensity = 3.57;
+// const pointLight3 = new THREE.PointLight( 0xe1ff, 2 );
+// pointLight3.position.set( 2.13, -3, -1.98 );
+// pointLight3.intensity = 3.57;
 
-scene.add(pointLight3);
+// scene.add(pointLight3);
 
 // const light3 = gui.addFolder( 'Light 03' );
 
@@ -119,9 +148,9 @@ scene.add(pointLight3);
 // light3.add( pointLight3.position, 'z' ).min( -3 ).max( 3 ).step( 0.01 );
 // light3.add( pointLight3, 'intensity' ).min( 0 ).max( 10 ).step( 0.01 );
 
-const light3Color = {
-    color: 0xff0000
-}
+// const light3Color = {
+//     color: 0xff0000
+// }
 
 // light3.addColor( light3Color, 'color' )
 //     .onChange( () => {
@@ -131,20 +160,24 @@ const light3Color = {
 // const pointLightHelper2 = new THREE.PointLightHelper( pointLight3, .5 );
 // scene.add( pointLightHelper2 );
 
-const pointLight4 = new THREE.PointLight( 0x1C1E21, 2 );
-pointLight4.position.set( -3, 1, -2 );
-pointLight4.intensity = -50;
+// const pointLight4 = new THREE.PointLight( 0x1C1E21, 2 );
+// pointLight4.position.set( -3, 1, -2 );
+// pointLight4.intensity = -50;
 
-scene.add(pointLight4);
+// scene.add(pointLight4);
 
 const pointLight5 = new THREE.PointLight( 0xffffff, 2 );
 pointLight5.position.set( -5, 2, -5 );
 pointLight5.intensity = 5;
 
 scene.add(pointLight5);
+
+
 /**
  * Sizes
  */
+
+
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -168,6 +201,8 @@ window.addEventListener( 'resize', () =>
 /**
  * Camera
  */
+
+
 // Base camera
 const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height, 0.1, 100 );
 camera.position.x = 0;
@@ -222,8 +257,10 @@ const updateSphere = ( event ) => {
     // sphereWireframeLine.position.y = window.scrollY * -.005 + .5;
 
     //Image Plane
-    imagePlane.position.z = window.scrollY * -.005 -5.005;
-    imagePlane2.position.z = window.scrollY * -.01 +5.005;
+    imagePlane.position.z = window.scrollY * -.01 -5.005;
+    imagePlane02.position.z = window.scrollY * -.01 +5.005;
+    imagePlane03.position.z = window.scrollY * -.01 +5.005;
+    imagePlane04.position.z = window.scrollY * -.01 +5.005;
     
     edgeLine.position.z = window.scrollY * -.005 + 5;  
 }
@@ -270,7 +307,9 @@ const tick = () =>
 
     //Image Plane
     imagePlane.rotation.x += .05 * ( targetY - imagePlane.rotation.x ); 
-    imagePlane2.rotation.x += .05 * ( targetY - imagePlane2.rotation.x ); 
+    imagePlane02.rotation.x += .05 * ( targetY - imagePlane02.rotation.x ); 
+    imagePlane03.rotation.x += .05 * ( targetY - imagePlane03.rotation.x ); 
+    imagePlane04.rotation.x += .05 * ( targetY - imagePlane04.rotation.x ); 
     
     edgeLine.rotation.x += .05 * ( targetY - edgeLine.rotation.x );
     // edgeLine.rotation.y += .05 * ( targetX - edgeLine.rotation.y );
