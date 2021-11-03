@@ -48,7 +48,6 @@ const planeTexture =textureLoader.load( '/img/hachiroku.jpg' );
 const planeTexture02 =textureLoader.load( '/img/07.jpg' );
 const planeTexture03 =textureLoader.load( '/img/09.jpg' );
 const planeTexture04 =textureLoader.load( '/img/04.jpg' );
-const planeTexture05 =textureLoader.load( '/img/05.jpg' );
 
         // Immediately use the texture for material creation
 const planeMaterial = new THREE.MeshBasicMaterial( { map: planeTexture } );
