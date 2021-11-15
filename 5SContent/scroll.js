@@ -4,11 +4,11 @@ var videoPersp = document.getElementsByClassName("s-video1")[0];
 
 function contadorState() {
     if (window.scrollY < 550) {
-        hLine.style.bottom = "9vh";
+        hLine.style.bottom = "5rem";
     }    
     else if (contador > 0, window.scrollY > 200) {
         videoPersp.classList.add("s-video1-show");
-        hLine.style.bottom = "0vh";
+        hLine.style.bottom = "0rem";
     }
 
 }
