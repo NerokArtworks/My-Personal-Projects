@@ -414,7 +414,6 @@ a:active, a:hover {
 .s-second {
     position: relative;
     top: 15vh;
-    height: auto;
 }
 
 .s-home-work-header {
@@ -452,7 +451,42 @@ a:active, a:hover {
     z-index: 6;
 }
 
-.s-work__item {
+.s-work__item01 {
+    top: 100px;
+    padding-left: 5.8714285714vw;
+    margin-bottom: 7.5rem;
+    width: 50%;
+    position: relative;
+    z-index: 6;
+}
+.s-work__item02 {
+    margin-top: 650px;
+    top: 0px;
+    padding-left: 5.8714285714vw;
+    margin-bottom: 7.5rem;
+    width: 50%;
+    position: relative;
+    z-index: 6;
+}
+.s-work__item03 {
+    top: 0px;
+    padding-left: 5.8714285714vw;
+    margin-bottom: 7.5rem;
+    width: 50%;
+    position: relative;
+    z-index: 6;
+}
+.s-work__item04 {
+    margin-top: -825px;
+    top: 0px;
+    padding-left: 5.8714285714vw;
+    margin-bottom: 7.5rem;
+    width: 50%;
+    position: relative;
+    z-index: 6;
+}
+.s-work__item05 {
+    top: 0px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
@@ -460,30 +494,30 @@ a:active, a:hover {
     z-index: 6;
 }
 
-.s-home-work-section .s-work__item {
+.s-work__item01, .s-work__item02, .s-work__item03, .s-work__item04, .s-work__item05 {
     margin-bottom: 7.5rem;
     padding-right: 5rem;
 }
 
-.s-home-work-section .s-work__item:nth-child(2) {
-    padding-left: 11.4285714286vw;
+.s-home-work-section .s-work__item02 {
+    padding-left: 10.4285714286vw;
 }
 
-.s-work__item:nth-child(2n-1) .s-work__img {
+.s-work__item01 .s-work__img {
     padding-right: 2.5rem;
 }
 
-.s-home-work-section .s-work__item:nth-child(3) {
+.s-home-work-section .s-work__item03 {
     padding-left: 11.4285714286vw;
     padding-right: 0;
 }
 
-.s-home-work-section .s-work__item:nth-child(4) {
+.s-home-work-section .s-work__item04 {
     padding-left: 5.7142857143vw;
     padding-right: 11.4285714286vw;
 }
 
-.s-home-work-section .s-work__item:nth-child(5) {
+.s-home-work-section .s-work__item05 {
     padding-left: 2.7142857143vw;
     margin-left: 21.2428571429vw;
 }
@@ -553,7 +587,6 @@ a:active, a:hover {
     align-items: flex-start;
     width: 96%;
     margin-left: 2vw;
-    margin-top: 20vh;
     background-color: #ebeded;
     position: relative;
     z-index: 18;
