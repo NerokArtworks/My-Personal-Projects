@@ -450,7 +450,6 @@ a:active, a:hover {
     flex-wrap: wrap;
     z-index: 6;
 }
-
 .s-work__item01 {
     top: 100px;
     padding-left: 5.8714285714vw;
@@ -458,6 +457,8 @@ a:active, a:hover {
     width: 50%;
     position: relative;
     z-index: 6;
+    transform: perspective(1000px) rotateX(-90deg);
+    transform-origin: center top;
 }
 .s-work__item02 {
     margin-top: 650px;
@@ -520,6 +521,12 @@ a:active, a:hover {
 .s-home-work-section .s-work__item05 {
     padding-left: 2.7142857143vw;
     margin-left: 21.2428571429vw;
+}
+
+.work-element-is-shown {
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: .2s;
+    transform: perspective(1000px) rotateX(0deg);
 }
 
 .s-work__link {

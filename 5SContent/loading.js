@@ -10,7 +10,7 @@ window.onload = function(e)
 {
     //document.readyState will be complete, it's one of the requirements for the window.onload event to be fired
     //do stuff for when everything is loaded
-    setTimeout(loaded, 2200)
+    setTimeout(loaded, 2000)
     function loaded () {
         var load = document.getElementById("loadline");
         load.style.opacity = "0";
