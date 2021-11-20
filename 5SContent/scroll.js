@@ -76,37 +76,134 @@ document.addEventListener('scroll', e => {
 });
 
     // Elementos del Parallax
-function workSectionState() {
-    var hasBeenActivated = false;
-    if (!hasBeenActivated) {
+
+        // Element 01
+function element01State() {
+    var element01HhasBeenActivated = false;
+    if (!element01HhasBeenActivated) {
         element01.classList.add('work-element-is-shown')
-        hasBeenActivated = true;
+        element01HhasBeenActivated = true;
+    }
+}
+        // Element 02
+function element02State() {
+    var element02HhasBeenActivated = false;
+    if (!element02HhasBeenActivated) {
+        element02.classList.add('work-element-is-shown')
+        element02HhasBeenActivated = true;
+    }
+}
+
+        // Element 03
+function element03State() {
+    var element03HhasBeenActivated = false;
+    if (!element03HhasBeenActivated) {
+        element03.classList.add('work-element-is-shown')
+        element03HhasBeenActivated = true;
+    }
+}
+
+        // Element 04
+function element04State() {
+    var element04HhasBeenActivated = false;
+    if (!element04HhasBeenActivated) {
+        element04.classList.add('work-element-is-shown')
+        element04HhasBeenActivated = true;
+    }
+}
+
+        // Element 05
+function element05State() {
+    var element05HhasBeenActivated = false;
+    if (!element05HhasBeenActivated) {
+        element05.classList.add('work-element-is-shown')
+        element05HhasBeenActivated = true;
     }
 }
 
     // Work section observers
 const element01Trigger = document.querySelector("#work-element01-trigger");
 const element02Trigger = document.querySelector("#work-element02-trigger");
+const element03Trigger = document.querySelector("#work-element03-trigger");
+const element04Trigger = document.querySelector("#work-element04-trigger");
+const element05Trigger = document.querySelector("#work-element05-trigger");
 
-var workObserver = new IntersectionObserver(function(entries) {
+        //Element 01 Observer
+var element01Observer = new IntersectionObserver(function(entries) {
 	if(entries[0]['isIntersecting'] === true) {
         console.log(contador);
         contadorState();
-		if(entries[0]['intersectionRatio'] === 1)
-			console.log('Target is fully visible in the screen');
-		else if(entries[0]['intersectionRatio'] > 0.5)
-			console.log('More than 50% of target is visible in the screen');
-		else 
-			console.log('Less than 50% of target is visible in the screen');
-            workSectionState();
+        if (entries[0]['intersectionRatio'] < 0.5)  
+            console.log('Less than 50% of target is visible in the screen');
+            element01State();	
 	}
 	else{
 		console.log('Target is not visible in the screen ' + contador);
 	}
 }, { threshold: [0, 0.5, 1] });
 
-workObserver.observe(element01Trigger);
-//workObserver.observe(element02Trigger);
+element01Observer.observe(element01Trigger);
+
+        //Element 02 Observer
+var element02Observer = new IntersectionObserver(function(entries) {
+	if(entries[0]['isIntersecting'] === true) {
+        console.log(contador);
+        if (entries[0]['intersectionRatio'] < 0.5)  
+            console.log('Less than 50% of target is visible in the screen');
+            element02State();	
+	}
+	else{
+		console.log('Target is not visible in the screen ' + contador);
+	}
+}, { threshold: [0, 0.5, 1] });
+
+element02Observer.observe(element02Trigger);
+
+        //Element 03 Observer
+var element03Observer = new IntersectionObserver(function(entries) {
+	if(entries[0]['isIntersecting'] === true) {
+        console.log(contador);
+        if (entries[0]['intersectionRatio'] < 0.5)  
+            console.log('Less than 50% of target is visible in the screen');
+            element03State();	
+	}
+	else{
+		console.log('Target is not visible in the screen ' + contador);
+	}
+}, { threshold: [0, 0.5, 1] });
+
+element03Observer.observe(element03Trigger);
+
+        //Element 04 Observer
+var element04Observer = new IntersectionObserver(function(entries) {
+	if(entries[0]['isIntersecting'] === true) {
+        console.log(contador);
+        if (entries[0]['intersectionRatio'] < 0.5)  
+            console.log('Less than 50% of target is visible in the screen');
+            element04State();	
+	}
+	else{
+		console.log('Target is not visible in the screen ' + contador);
+	}
+}, { threshold: [0, 0.5, 1] });
+
+element04Observer.observe(element04Trigger);
+
+        //Element 05 Observer
+var element05Observer = new IntersectionObserver(function(entries) {
+	if(entries[0]['isIntersecting'] === true) {
+        console.log(contador);
+        if (entries[0]['intersectionRatio'] < 0.5)  
+            console.log('Less than 50% of target is visible in the screen');
+            element05State();	
+	}
+	else{
+		console.log('Target is not visible in the screen ' + contador);
+	}
+}, { threshold: [0, 0.5, 1] });
+
+element05Observer.observe(element05Trigger);
+
 
 
 

@@ -448,56 +448,43 @@ a:active, a:hover {
     pointer-events: none;
     display: flex;
     flex-wrap: wrap;
-    z-index: 6;
 }
 .s-work__item01 {
-    top: 100px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
-    position: relative;
-    z-index: 6;
-    transform: perspective(1000px) rotateX(-90deg);
-    transform-origin: center top;
 }
 .s-work__item02 {
     margin-top: 650px;
-    top: 0px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
-    position: relative;
-    z-index: 6;
 }
 .s-work__item03 {
-    top: 0px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
-    position: relative;
-    z-index: 6;
 }
 .s-work__item04 {
     margin-top: -825px;
-    top: 0px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
-    position: relative;
-    z-index: 6;
 }
 .s-work__item05 {
-    top: 0px;
     padding-left: 5.8714285714vw;
     margin-bottom: 7.5rem;
     width: 50%;
-    position: relative;
-    z-index: 6;
 }
 
 .s-work__item01, .s-work__item02, .s-work__item03, .s-work__item04, .s-work__item05 {
     margin-bottom: 7.5rem;
     padding-right: 5rem;
+    transform: perspective(1000px) rotateX(-90deg);
+    transform-origin: center top;
+    z-index: 6;
+    position: relative;
+    top: 0px;
 }
 
 .s-home-work-section .s-work__item02 {
