@@ -511,8 +511,9 @@ a:active, a:hover {
 }
 
 .work-element-is-shown {
-    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition-delay: .2s;
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+                top 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
     transform: perspective(1000px) rotateX(0deg);
 }
 

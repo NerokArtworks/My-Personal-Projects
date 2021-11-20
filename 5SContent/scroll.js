@@ -81,7 +81,8 @@ document.addEventListener('scroll', e => {
 function element01State() {
     var element01HhasBeenActivated = false;
     if (!element01HhasBeenActivated) {
-        element01.classList.add('work-element-is-shown')
+        element01.classList.add('work-element-is-shown');
+        element01.style.top += 100 + "px";
         element01HhasBeenActivated = true;
     }
 }
@@ -89,7 +90,8 @@ function element01State() {
 function element02State() {
     var element02HhasBeenActivated = false;
     if (!element02HhasBeenActivated) {
-        element02.classList.add('work-element-is-shown')
+        element02.classList.add('work-element-is-shown');
+        element02.style.top += 100 + "px";
         element02HhasBeenActivated = true;
     }
 }
@@ -98,7 +100,8 @@ function element02State() {
 function element03State() {
     var element03HhasBeenActivated = false;
     if (!element03HhasBeenActivated) {
-        element03.classList.add('work-element-is-shown')
+        element03.classList.add('work-element-is-shown');
+        element03.style.top += 100 + "px";
         element03HhasBeenActivated = true;
     }
 }
@@ -107,7 +110,8 @@ function element03State() {
 function element04State() {
     var element04HhasBeenActivated = false;
     if (!element04HhasBeenActivated) {
-        element04.classList.add('work-element-is-shown')
+        element04.classList.add('work-element-is-shown');
+        element04.style.top += 100 + "px";
         element04HhasBeenActivated = true;
     }
 }
@@ -116,7 +120,8 @@ function element04State() {
 function element05State() {
     var element05HhasBeenActivated = false;
     if (!element05HhasBeenActivated) {
-        element05.classList.add('work-element-is-shown')
+        element05.classList.add('work-element-is-shown');
+        element05.style.top += 100 + "px";
         element05HhasBeenActivated = true;
     }
 }
