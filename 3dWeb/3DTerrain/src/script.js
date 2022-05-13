@@ -43,7 +43,7 @@ gui.add(TerrainPlane.rotation, 'x').min(0).max(600)
 
 // Lights
 
-const pointLight = new THREE.PointLight(0xffffff, 20)
+const pointLight = new THREE.PointLight(0xffffff, 25)
 pointLight.position.x = 12
 pointLight.position.y = 9
 pointLight.position.z = 3.1
@@ -125,8 +125,6 @@ const tick = () =>
     const elapsedTime = clock.getElapsedTime()
 
     // Update objects
-    //sphere.rotation.y = .5 * elapsedTime
-
     TerrainPlane.rotation.z = .05 
     TerrainPlane.position.z = .1 * elapsedTime
     TerrainPlane.material.displacementScale = .3 + mouseY * -0.001
